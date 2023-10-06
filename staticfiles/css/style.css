@@ -1,0 +1,88 @@
+/* Update the text color based on priority */
+.priority-low {
+  color: yellow;
+}
+
+.priority-medium {
+  color: blue;
+}
+
+.priority-high {
+  color: red;
+}
+
+/* Update the text color based on status */
+.status-incomplete {
+  color: yellow;
+}
+
+.status-complete {
+  color: green;
+}
+
+/* Update the font size for priority and status display */
+.priority-low, .priority-medium, .priority-high,
+.status-incomplete, .status-complete {
+  font-size: 14px;
+}
+
+/* Update the font size for title and description */
+.task-title, .task-description {
+  font-size: 14px;
+}
+
+/* Add styles for the draggable modal */
+.draggable {
+  cursor: move;
+}
+
+/* Add a dark background to the entire website */
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Add a dark background to the modal */
+.modal-content {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the modal header and close button */
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-header h5 {
+  color: #fff;
+}
+
+.modal-header button {
+  color: #fff;
+}
+
+/* Style the modal body */
+.modal-body {
+  padding: 20px;
+}
+
+/* Style the modal footer */
+.modal-footer {
+  border-top: none;
+}
+
+/* Custom Confirmation Popup for "Delete" button */
+.confirmation-popup {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Custom Confirmation Popup for "Reset ALL Tasks" button */
+.confirmation-popup-red {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

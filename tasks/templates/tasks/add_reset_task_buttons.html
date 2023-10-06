@@ -1,0 +1,24 @@
+
+<!-- Add task and Reset tasks Button -->
+
+{% block add_reset_task_buttons %}
+  
+<div class="row mb-2">
+  <div class="col-md-12">
+    <div class="container text-center pt-2 mt-2">
+      <div class="d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-outline-primary btn-sm ms-3 mt-4" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+          Add New Task
+        </button>
+
+        <form action="{% url 'tasks:reset_tasks' %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-outline-danger btn-sm ms-3 mt-4" onclick="return showResetConfirmationPopup(event)">
+            Reset ALL Tasks
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock add_reset_task_buttons %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+To Do List
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center mt-4 mb-2">
+    <div class="col-md-12 text-center">
+      <h2>My List</h2>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-2">
+      <strong>Title</strong>
+    </div>
+    <div class="col-md-4">
+      <strong>Description</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Priority</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Status</strong>
+    </div>
+    <div class="col-md-2">
+      <strong>Actions</strong>
+    </div>
+  </div>
+
+  <!-- Your tasks will be dynamically added here -->
+  {% for task in tasks %}
+  <div class="row">
+    <div class="col-md-2 task-title">{{ task.title }}</div>
+    <div class="col-md-4 task-description">{{ task.description }}</div>
+    <div class="col-md-2 {% if task.priority == 'low' %}priority-low{% elif task.priority == 'medium' %}priority-medium{% elif task.priority == 'high' %}priority-high{% endif %}">
+      {{ task.get_priority_display }}
+    </div>
+    <div class="col-md-2 {% if task.status == 'incomplete' %}status-incomplete{% elif task.status == 'complete' %}status-complete{% endif %}">
+      {{ task.get_status_display }}
+    </div>
+    <div class="col-md-2">
+      <!-- Make dragable available for Edit button-->
+      <div class="draggable">
+        <div class="d-flex align-items-center">
+          {% if task.id %}
+          <a href="{% url 'tasks:update_task' task.id %}" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editTaskModal{{ task.id }}">Edit</a>
+          {% else %}
+          <span class="btn btn-primary btn-sm disabled me-2">Edit</span>
+          {% endif %}
+          <a href="{% url 'tasks:delete_task' task.id %}" class="btn btn-outline-danger btn-sm" onclick="return showConfirmationPopup(event)">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <!--Include "Display the success message" code -->
+  {% include 'tasks/success_messages.html' %}
+
+  <!--Include Function to show the confirmation popup for the "Delete" and "Reset ALL Tasks" button -->
+  <div id="confirmationMessage"></div>
+  
+  {% include 'tasks/confirmation_popup.html' %}
+
+  <!-- Include "Add new task" and "Reset All tasks" buttons --> 
+  {% include 'tasks/add_reset_task_buttons.html' %}
+
+  <!-- Include Dragging for the modals -->
+  {% include 'tasks/dragging.html' %}
+</div>
+{% endblock content %}

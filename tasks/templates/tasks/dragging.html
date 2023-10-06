@@ -1,0 +1,39 @@
+<script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.17/dist/interact.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/interactjs@1.10.17/dist/api/styles/jsdoc-default.min.css" rel="stylesheet">
+
+<script>
+    // Your JavaScript code for Dragging goes here
+    interact(".draggable").draggable({
+        listeners: {
+            start(event) {
+                // Get the initial position of the modal
+                const modal = event.target;
+                const rect = modal.getBoundingClientRect();
+                event.interactable.options.startOffset = {
+                    x: rect.left - event.clientX,
+                    y: rect.top - event.clientY,
+                };
+            },
+            move(event) {
+                // Move the modal as the user drags it
+                const modal = event.target;
+                const x = (parseFloat(modal.getAttribute("data-x")) || 0) + event.dx;
+                const y = (parseFloat(modal.getAttribute("data-y")) || 0) + event.dy;
+
+                // Update the modal's position
+                modal.style.transform = `translate(${x}px, ${y}px)`;
+
+                // Store the new position in data attributes
+                modal.setAttribute("data-x", x);
+                modal.setAttribute("data-y", y);
+            },
+        },
+        modifiers: [
+            // Restrict dragging to within the container (the viewport)
+            interact.modifiers.restrictRect({
+                restriction: "viewport",
+            }),
+        ],
+    });
+</script>
+

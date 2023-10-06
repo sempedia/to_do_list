@@ -1,0 +1,20 @@
+<!-- Display the success message -->
+
+{% block success_messages %}
+  
+{% if messages %}
+<div class="container">
+  <div class="row justify-content-center mt-2">
+    <div class="col-md-8">
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
