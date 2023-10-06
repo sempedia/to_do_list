@@ -1,37 +1,32 @@
 https://github.com/sempedia/to_do_list/assets/104672255/f7e8e62d-c900-40ae-8221-4905bd60a5c0
 
-StudyBuddy Online Learning Platform
+TaskMaster - Your Ultimate To-Do List Application
 
-Stack Used: Python / Django / HTML / CSS / JavaScript / Bootstrap / SQlite3
+Stack Used: Python / Django / HTML / CSS / JavaScript / Bootstrap / SQLite3
 
-StudyBuddy - Dynamic Web Application built using a robust Tech Stack and designed to foster collaborative learning and knowledge sharing among its users.
-This Online Learning Platform empowers individuals to create and join study rooms dedicated to a wide array of topics.
+- TaskMaster is a powerful and feature-rich To-Do List Application designed to streamline your daily tasks and boost your productivity. Built using a robust tech stack, this web application offers a seamless user experience, allowing you to efficiently manage your tasks, set priorities, and stay organized.
+
 Key Features:
 
-Topic-Centric Study Rooms: StudyBuddy provides a platform for users to create and participate in study rooms tailored to specific subjects. From programming languages to science topics, there's a room for everyone. These rooms serve as collaborative spaces for discussions, questions, and sharing resources related to the topic.
+- Effortless Task Management: TaskMaster simplifies task management with easy-to-use CRUD (Create, Read, Update, Delete) functionalities. You can effortlessly create, view, update, and delete tasks with just a few clicks.
 
-Topic Exploration: StudyBuddy offers a user-friendly interface for browsing topics of interest. Users can easily discover rooms related to their preferred subjects and join them to start learning.
+- Intuitive User Interface: The application boasts an intuitive and responsive user interface, ensuring a smooth experience across various devices. Whether you're on your desktop, tablet, or smartphone, TaskMaster adapts to your needs.
 
-Searching Feature: with this feature users can easily search based on single character or one word to find rooms and topics that contain that character or word.
 
-User Interaction: Users can actively engage with others inside study rooms, discussing concepts, asking questions, and sharing resources. The interactive environment fosters a sense of community and enhances the learning experience.
+- Draggable Task Windows: Taskmaster is a DriftTask and introduces an innovative draggable window feature, allowing you to reposition the task editing and task adding windows to your preferred location on the screen. This feature enhances your control and customization of the user interface.
 
-Chat Functionality: The platform provides a real-time chat interface were different users can participate to discussions on different topics from different study rooms they choose.
+- Confirmation Popups: To prevent accidental task deletion or updates, TaskMaster features confirmation popups that prompt you to confirm your actions. This ensures that you maintain control over your task list.
 
-User Profiles: Each user has a personalized profile and they can showcase their interests, join rooms, and interact with other users. User profiles also display a list of rooms they've created and participated in.
+- Success Messages: Receive instant feedback on your actions with success messages, confirming the completion of your tasks or any changes made to them.
 
-Participant Tracking: The platform provides visibility into room participation by displaying the number of users actively engaged in each study room and they account details.
+- Reset All Tasks: When you want a fresh start, TaskMaster offers a convenient "Reset All Tasks" feature, enabling you to clear your task list and begin a new one.
 
-Recent Activities: Users can stay updated with the latest discussions and activities in the rooms they're part of through the Recent Activities feed. This feature ensures that users don't miss out on important conversations.
+- Customizable Task Details: You can personalize your task entries by adding titles, descriptions, and priority levels, helping you stay organized and focused.
 
-User Authentication and Privileges: To maintain a secure and trusted learning environment, StudyBuddy implements user authentication. Only registered users can create rooms, participate in discussions, and contribute to the community.
+- Responsive Design: No matter your preferred device, TaskMaster ensures a consistent and user-friendly experience.
 
-Room and Profile Management: Users have the flexibility to edit their room details and profile information, allowing them to customize their learning experience.
+- Interactive and Engaging: TaskMaster leverages the power of Django and JavaScript to provide an interactive and intuitive interface. Features like draggable window feature for editing tasks and add new tasks operations and real-time updates enhance the overall user experience.
 
-Responsive Design: The platform is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and smartphones.
+TaskMaster is more than just a to-do list app; it's your personal task management assistant. Whether you're a student juggling assignments, a professional managing projects, or anyone seeking a more organized life, TaskMaster has you covered.
 
-Interactive and Intuitive: StudyBuddy leverages the power of Django and JavaScript to provide an interactive and intuitive interface. Features like real-time chat, notifications, and search make the platform user-friendly.
-
-StudyBuddy is more than just an online platform; it's a community of learners coming together to exchange knowledge, support one another's educational journeys, and make learning a collaborative and enjoyable experience. Whether you're a student looking to study together, a professional seeking to expand your skills, or anyone interested in learning and sharing knowledge, StudyBuddy is the ideal platform for you.
-
-Join StudyBuddy today to connect with a community of learners, explore various topics, unlock a world of collaborative learning possibilities and take your online learning journey to the next level!
+Take control of your tasks, boost your productivity, and simplify your daily life with TaskMaster. Get started today and experience the ultimate in task management and organization!
